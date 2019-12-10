@@ -1,0 +1,13 @@
+var mongoose = require('mongoose');
+var UserSchema = new mongoose.Schema({
+    firstName: String,
+    lastName: String,
+    email: String,
+    password: String,
+    updated_date: {type: Date, default: Date.now},
+});
+
+
+const User = mongoose.model('UserCollection',UserSchema);
+
+module.exports = User ;
